@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 body{
-    background-color: green;
+    background-color: v.$dark;
 }

@@ -1,5 +1,7 @@
-@use 'variables' as v;
-
 body{
-    background-color: v.$dark;
+    background-color:$dark;
+}
+
+h1{
+    color:rgb(62, 104, 253);
 }

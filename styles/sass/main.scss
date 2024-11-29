@@ -1,9 +1,7 @@
-@use 'variables' as v;
-@use 'typography';
-@use 'layout';
-@use 'base';
+@import 'variables';
+@import 'typography';
+@import 'layout';
+@import 'base';
 
-h1{
-    color:rgb(62, 104, 253);
-}
+
 

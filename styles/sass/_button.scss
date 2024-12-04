@@ -1,0 +1,20 @@
+.btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    background-color: $tertiary;
+    box-shadow: 0 10px 40px $tertiary;
+    color: $white;
+    border-color: darken($color: $tertiary, $amount: 40%);
+
+    &:hover{
+        transform: translateY(-10%);
+        color: $dark;
+        background-color: $white;
+        box-shadow: 0 10px 40px $white;
+    }
+}

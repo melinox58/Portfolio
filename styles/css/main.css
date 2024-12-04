@@ -121,4 +121,24 @@ header h1 {
 }
 .section-display .illustration img {
   width: 76%;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+  background-color: orange;
+  box-shadow: 0 10px 40px orange;
+  color: white;
+  border-color: #332100;
+}
+.btn:hover {
+  transform: translateY(-10%);
+  color: #171c28;
+  background-color: white;
+  box-shadow: 0 10px 40px white;
 }/*# sourceMappingURL=main.css.map */

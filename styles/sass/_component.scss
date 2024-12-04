@@ -1,0 +1,24 @@
+.section-display{
+    display: flex;
+    .text-content{
+        flex: 1;
+        .title{
+            font-size: 50px;
+        }
+        .paragraph{
+            font-size: 20px;
+        }
+        .actions-div{
+            display: flex;
+        }
+
+    }
+    .illustration{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 76%;
+        }
+    }
+}

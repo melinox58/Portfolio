@@ -1,7 +1,124 @@
-body {
-  background-color: #171c28;
+@charset "UTF-8";
+/* On modernise notre balise de navigation avec une petite ombre. On mets tous les éléments du menu les uns bien à côté des autres avec flexbox (display: flex) */
+nav {
+  background-color: #fff;
+  padding: 0 20px;
+  border-radius: 40px;
+  box-shadow: 0 10px 40px rgba(159, 162, 177, 0.8);
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  position: relative;
+  justify-content: center;
+  flex: 2;
+  gap: 5%;
 }
 
+/* On stylise chaque élément */
+.nav-item {
+  color: #83818c;
+  font-family: arial, sans-serif;
+  padding: 20px;
+  margin: 0 6px;
+  position: relative;
+}
+
+/* Ici on met juste un petit élément avant chaque élément pour le rendre plus beau visuellement */
+.nav-item:before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  background-color: #dfe2ea;
+  height: 5px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+/* Avec les dernières nouveautés de CSS, on peut changer les propriétés des éléments selon des conditions avec not */
+.nav-item:not(.is-active):hover:before {
+  bottom: 0;
+}
+
+.nav-item:not(.is-active):hover {
+  color: #333;
+}
+
+/* Stylisons notre indicateur */
+.nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  transition: 0.4s;
+  border-radius: 8px 8px 0 0;
+}
+
+@font-face {
+  font-family: "Chettalbury Italic Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Chettalbury Italic Regular"), url("ChettalburyItalic-lxxwq.woff") format("woff");
+}
+@font-face {
+  font-family: "Romeria Notes PERSONAL USE Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Romeria Notes PERSONAL USE Regular"), url("RomeriaNotesPersonalUseRegular-aYY79.woff") format("woff");
+}
 h1 {
+  font-family: "Romeria Notes PERSONAL USE Regular";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #171c28;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  margin: 4%;
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3%;
+  width: 80vw;
+}
+header h1 {
   color: rgb(62, 104, 253);
+  font-size: 3rem;
+  flex: 1;
+}
+
+.section-display {
+  display: flex;
+}
+.section-display .text-content {
+  flex: 1;
+}
+.section-display .text-content .title {
+  font-size: 50px;
+}
+.section-display .text-content .paragraph {
+  font-size: 20px;
+}
+.section-display .text-content .actions-div {
+  display: flex;
+}
+.section-display .illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.section-display .illustration img {
+  width: 76%;
 }/*# sourceMappingURL=main.css.map */

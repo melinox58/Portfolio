@@ -1,0 +1,10 @@
+services:
+  web-service:
+    container_name: mel-portfolio
+    image: httpd:latest
+    cpus: 1.5
+    mem_limit: 2048m
+    ports: 
+      - "8080:80"
+    volumes:
+      - .:/usr/local/apache2/htdocs

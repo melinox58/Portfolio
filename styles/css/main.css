@@ -85,6 +85,7 @@ body {
   font-family: Montserrat, sans-serif;
   margin: 4%;
   color: white;
+  width: 90vw;
 }
 
 header {
@@ -99,28 +100,92 @@ header h1 {
   flex: 1;
 }
 
-.section-display {
+.left-content {
   display: flex;
 }
-.section-display .text-content {
+.left-content .text-content {
   flex: 1;
+  align-content: center;
+  height: 65vh;
+  margin: 5% 0 5% 0;
 }
-.section-display .text-content .title {
-  font-size: 50px;
-}
-.section-display .text-content .paragraph {
+.left-content .text-content .paragraph {
   font-size: 20px;
 }
-.section-display .text-content .actions-div {
+.left-content .text-content .socials {
   display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 45px;
+  margin-top: 3%;
 }
-.section-display .illustration {
+.left-content .text-content .socials i {
+  transition: all 0.3s case;
+}
+.left-content .text-content .socials i:hover {
+  cursor: pointer;
+  color: rgb(40, 119, 255);
+  transform: scale(1.2);
+}
+.left-content .text-content .actions-div {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 5%;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.right-content .text-content {
+  flex: 1;
+  align-content: center;
+  height: 65vh;
+  margin: 5% 0 5% 0;
+}
+.right-content .text-content .paragraph {
+  font-size: 20px;
+  text-align: center;
+}
+.right-content .text-content .competences-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 45px;
+  margin-top: 3%;
+}
+.right-content .text-content .competences-icons i {
+  transition: all 0.3s case;
+}
+.right-content .text-content .competences-icons i:hover {
+  cursor: pointer;
+  color: rgb(40, 119, 255);
+  transform: scale(1.2);
+}
+.right-content .text-content .actions-div {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 5%;
+}
+
+.title {
+  font-size: 50px;
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+.illustration {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.section-display .illustration img {
-  width: 76%;
+.illustration img {
+  width: 74%;
+  height: 74%;
 }
 
 .btn {

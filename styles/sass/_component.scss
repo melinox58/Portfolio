@@ -1,24 +1,89 @@
-.section-display{
+.left-content{
     display: flex;
     .text-content{
         flex: 1;
-        .title{
-            font-size: 50px;
-        }
+        align-content: center;
+        height: 65vh;
+        margin: 5% 0 5% 0;
         .paragraph{
             font-size: 20px;
         }
+        .socials{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 45px;
+            margin-top: 3%;
+            i{
+                transition: all 0.3s case;
+                &:hover{
+                    cursor: pointer;
+                    color: $primary;
+                    transform: scale(1.2);
+                }
+            }
+        }
         .actions-div{
             display: flex;
+            justify-content: center;
+            gap: 5%;
+            margin-top: 5%;
         }
-
     }
-    .illustration{
+}
+
+.right-content{
+    display: flex;
+    flex-direction: row-reverse;
+    .text-content{
         flex: 1;
-        display: flex;
-        justify-content: center;
-        img{
-            width: 76%;
+        align-content: center;
+        height: 65vh;
+        margin: 5% 0 5% 0;
+        .paragraph{
+            font-size: 20px;
+            text-align: center;
         }
+        .competences-icons{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 45px;
+            margin-top: 3%;
+            i{
+                transition: all 0.3s case;
+                &:hover{
+                    cursor: pointer;
+                    color: $primary;
+                    transform: scale(1.2);
+                }
+            }
+        }
+        .actions-div{
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+            margin-top: 5%;
+        }
+    }
+    
+}
+
+.title{
+    font-size: 50px;
+    font-family: Montserrat,sans-serif;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.illustration{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 74%;
+        height: 74%;
     }
 }

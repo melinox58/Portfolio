@@ -85,7 +85,10 @@ body {
   font-family: Montserrat, sans-serif;
   margin: 4%;
   color: white;
-  width: 90vw;
+}
+
+main {
+  margin: 4%;
 }
 
 header {
@@ -102,22 +105,24 @@ header h1 {
 
 .left-content {
   display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .left-content {
+    flex-direction: row;
+  }
 }
 .left-content .text-content {
   flex: 1;
   align-content: center;
-  height: 65vh;
-  margin: 5% 0 5% 0;
-}
-.left-content .text-content .paragraph {
-  font-size: 20px;
+  height: 80vh;
 }
 .left-content .text-content .socials {
   display: flex;
   justify-content: center;
   gap: 30px;
-  font-size: 45px;
-  margin-top: 3%;
+  font-size: 30px;
+  margin-top: 8%;
 }
 .left-content .text-content .socials i {
   transition: all 0.3s case;
@@ -127,33 +132,38 @@ header h1 {
   color: rgb(40, 119, 255);
   transform: scale(1.2);
 }
-.left-content .text-content .actions-div {
-  display: flex;
-  justify-content: center;
-  gap: 5%;
-  margin-top: 5%;
+@media screen and (min-width: 768px) {
+  .left-content .text-content .socials {
+    font-size: 45px;
+    margin-top: 0;
+  }
 }
 
 .right-content {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .right-content {
+    flex-direction: row-reverse;
+  }
 }
 .right-content .text-content {
   flex: 1;
-  align-content: center;
   height: 65vh;
   margin: 5% 0 5% 0;
-}
-.right-content .text-content .paragraph {
-  font-size: 20px;
   text-align: center;
 }
 .right-content .text-content .competences-icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  font-size: 45px;
+  font-size: 30px;
   margin-top: 3%;
+  width: 63%;
+  margin: auto;
+  margin-top: 6%;
 }
 .right-content .text-content .competences-icons i {
   transition: all 0.3s case;
@@ -163,18 +173,22 @@ header h1 {
   color: rgb(40, 119, 255);
   transform: scale(1.2);
 }
-.right-content .text-content .actions-div {
-  display: flex;
-  justify-content: center;
-  gap: 5%;
-  margin-top: 5%;
+@media screen and (min-width: 768px) {
+  .right-content .text-content .competences-icons {
+    font-size: 45px;
+  }
 }
 
 .title {
-  font-size: 50px;
+  font-size: 25px;
   font-family: Montserrat, sans-serif;
   margin-bottom: 3%;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 50px;
+  }
 }
 
 .illustration {
@@ -182,10 +196,35 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20%;
 }
 .illustration img {
-  width: 74%;
-  height: 74%;
+  width: 80%;
+  height: auto;
+  margin-top: 5%;
+}
+@media screen and (min-width: 768px) {
+  .illustration img {
+    width: 74%;
+    height: auto;
+  }
+}
+
+.actions-div {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 5%;
+}
+
+.paragraph {
+  font-size: 10px;
+  margin-top: 4%;
+}
+@media screen and (min-width: 768px) {
+  .paragraph {
+    font-size: 20px;
+  }
 }
 
 .btn {
@@ -193,17 +232,24 @@ header h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 400;
   transition: all 0.3s;
   background-color: orange;
   box-shadow: 0 10px 40px orange;
   color: white;
   border-color: #332100;
+  margin-top: 4%;
 }
 .btn:hover {
   transform: translateY(-10%);
   color: #171c28;
   background-color: white;
   box-shadow: 0 10px 40px white;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 16px;
+    font-weight: 600;
+  }
 }/*# sourceMappingURL=main.css.map */

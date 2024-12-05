@@ -1,19 +1,19 @@
 .left-content{
     display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px){
+        flex-direction: row;
+    }
     .text-content{
         flex: 1;
         align-content: center;
-        height: 65vh;
-        margin: 5% 0 5% 0;
-        .paragraph{
-            font-size: 20px;
-        }
+        height: 80vh;
         .socials{
             display: flex;
             justify-content: center;
             gap: 30px;
-            font-size: 45px;
-            margin-top: 3%;
+            font-size: 30px;
+            margin-top: 8%;
             i{
                 transition: all 0.3s case;
                 &:hover{
@@ -22,34 +22,35 @@
                     transform: scale(1.2);
                 }
             }
-        }
-        .actions-div{
-            display: flex;
-            justify-content: center;
-            gap: 5%;
-            margin-top: 5%;
+            @media screen and (min-width: 768px){
+                font-size: 45px;
+                margin-top: 0;
+            }
         }
     }
 }
 
 .right-content{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
+    @media screen and (min-width: 768px){
+        flex-direction: row-reverse;
+    }
     .text-content{
         flex: 1;
-        align-content: center;
         height: 65vh;
         margin: 5% 0 5% 0;
-        .paragraph{
-            font-size: 20px;
-            text-align: center;
-        }
+        text-align: center;
         .competences-icons{
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
-            font-size: 45px;
+            font-size: 30px;
             margin-top: 3%;
+            width: 63%;
+            margin: auto;
+            margin-top: 6%;
             i{
                 transition: all 0.3s case;
                 &:hover{
@@ -58,32 +59,53 @@
                     transform: scale(1.2);
                 }
             }
+            @media screen and (min-width: 768px){
+                font-size: 45px;
+            }
         }
-        .actions-div{
-            display: flex;
-            justify-content: center;
-            gap: 5%;
-            margin-top: 5%;
-        }
-    }
-    
+    }   
 }
 
 .title{
-    font-size: 50px;
+    font-size: 25px;
     font-family: Montserrat,sans-serif;
     margin-bottom: 3%;
     text-align: center;
+    @media screen and (min-width: 768px){
+        font-size: 50px;
+    }
 }
+
 
 .illustration{
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20%;
 
     img{
-        width: 74%;
-        height: 74%;
+        width: 80%;
+        height: auto;
+        margin-top: 5%;
+        @media screen and (min-width: 768px){
+            width: 74%;
+            height: auto;
+        }
+    }
+}
+
+.actions-div{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 5%;
+}
+
+.paragraph{
+    font-size: 10px;
+    margin-top: 4%;
+    @media screen and (min-width: 768px){
+        font-size: 20px;
     }
 }

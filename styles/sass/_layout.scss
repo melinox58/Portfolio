@@ -23,9 +23,11 @@ header{
     flex-direction: row;
     margin-bottom: 3%;
     width: 80vw;
+    height: 7vh;
+    position: fixed;
     h1{
         color:rgb(62, 104, 253);
-        font-size: 3rem;
+        font-size: 4.5rem;
         flex: 1;
     }
 }

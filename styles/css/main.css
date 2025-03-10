@@ -8,7 +8,6 @@ nav {
   display: flex;
   overflow: hidden;
   overflow-x: auto;
-  position: fixed;
   justify-content: center;
   flex: 2;
   gap: 5%;
@@ -61,13 +60,13 @@ nav {
   font-family: "Chettalbury Italic Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Chettalbury Italic Regular"), url("ChettalburyItalic-lxxwq.woff") format("woff");
+  src: local("Chettalbury Italic Regular"), url("/styles/ChettalburyItalic-lxxwq.otf") format("woff");
 }
 @font-face {
   font-family: "Romeria Notes PERSONAL USE Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Romeria Notes PERSONAL USE Regular"), url("RomeriaNotesPersonalUseRegular-aYY79.woff") format("woff");
+  src: local("Romeria Notes PERSONAL USE Regular"), url("/styles/RomeriaNotes_PERSONAL_USE_ONLY.otf") format("woff");
 }
 h1 {
   font-family: "Romeria Notes PERSONAL USE Regular";
@@ -98,16 +97,19 @@ header {
   flex-direction: row;
   margin-bottom: 3%;
   width: 80vw;
+  height: 7vh;
+  position: fixed;
 }
 header h1 {
   color: rgb(62, 104, 253);
-  font-size: 3rem;
+  font-size: 4.5rem;
   flex: 1;
 }
 
 .left-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .left-content {
@@ -144,6 +146,7 @@ header h1 {
 .right-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .right-content {
@@ -198,7 +201,6 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20%;
 }
 .illustration img {
   width: 80%;

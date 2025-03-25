@@ -16,7 +16,7 @@
 
         <nav>
             <a href="#" class="nav-item is-active" data-active-color="orange" data-target="Home">Skills</a>
-            <a href="#" class="nav-item" data-active-color="green" data-target="About">Expériences</a>
+            <a href="#" class="nav-item" data-active-color="green" data-target="About">Compétences</a>
             <a href="#" class="nav-item" data-active-color="blue" data-target="Testimonials">Projets</a>
             <a href="#" class="nav-item" data-active-color="red" data-target="Blog">Formations</a>
             <a href="#" class="nav-item" data-active-color="purple" data-target="Contact">Contact</a>
@@ -36,18 +36,33 @@
                 Quelques notions en Docker. Utilisation de Git et Github. Travaille en mobile first.
             </p>
             <div class="socials">
-                <i class="fa-brands fa-github"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-solid fa-envelope"></i>
+                <a href="https://github.com/melinox58"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mélanie-martinon-a20143264" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:melanie.martinon3@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             </div>
             <div class="actions-div">
-                <button class="btn">Contact</button>
-                <button class="btn">CV</button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn" id="openModal">
+                    CV
+                </button>
             </div>
 
+            <!-- Modal -->
+            <div class="modal" id="exampleModal">
+                <div class="modal-dialog">
+                    <button class="btn-close" id="closeModal">X</button>
+                    <div class="modal-body">
+                        <embed src="/img/cv mel 2025 DEV.pdf" width="100%" height="500" type="application/pdf"/>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" id="closeModalFooter">Fermer</button>
+                    </div>
+                </div>
+            </div>
+          
         </article>
         <div class="illustration">
-            <img src="img\presentation.png" alt="Image de présentation">
+            <img src="img\presentation.png" alt="Présentation">
         </div>
     </section>
 
@@ -71,7 +86,7 @@
             </p>
         </article>
         <div class="illustration">
-            <img src="img\4.png" alt="Image de présentation">
+            <img src="img\4.png" alt="Image de compétences">
         </div>
     </section>
 
@@ -112,6 +127,7 @@ FOOTER
 </footer>
 
     <script src="js\nav.js"></script>
+    <script src="js\modals.js"></script>
     <script src="https://kit.fontawesome.com/7889523c1f.js" crossorigin="anonymous"></script>
 </body>
 </html>

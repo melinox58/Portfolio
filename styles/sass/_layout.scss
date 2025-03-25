@@ -27,8 +27,12 @@ header{
     position: fixed;
     h1{
         color:rgb(62, 104, 253);
-        font-size: 4.5rem;
+        font-size: 2rem;
         flex: 1;
+        text-align: center;
+        @media screen and (min-width: 768px){
+            font-size: 4.5rem;
+        }
     }
 }
 

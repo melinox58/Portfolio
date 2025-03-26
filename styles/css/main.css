@@ -11,7 +11,7 @@ nav {
   overflow-x: auto;
   justify-content: center;
   flex: 2;
-  gap: 5%;
+  gap: 4%;
   right: 10%;
   width: 50%;
 }
@@ -97,9 +97,14 @@ header {
   display: flex;
   flex-direction: row;
   margin-bottom: 3%;
-  width: 80vw;
+  width: 85vw;
   height: 7vh;
   position: fixed;
+}
+@media screen and (min-width: 768px) {
+  header {
+    gap: 5%;
+  }
 }
 header h1 {
   color: rgb(62, 104, 253);
@@ -129,32 +134,48 @@ header h1 {
   align-content: center;
   height: 80vh;
 }
-.left-content .text-content .paragraph {
-  font-size: 0.8rem;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .left-content .text-content .paragraph {
-    font-size: 20px;
-  }
-}
 .left-content .text-content .socials {
   display: flex;
   justify-content: center;
   gap: 30px;
   font-size: 30px;
   margin-top: 8%;
+  position: relative;
 }
-.left-content .text-content .socials i {
-  transition: all 0.3s case;
+.left-content .text-content .socials a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
 }
-.left-content .text-content .socials i:hover {
+.left-content .text-content .socials a .hover-text {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  white-space: nowrap;
+}
+.left-content .text-content .socials a:hover .hover-text {
+  visibility: visible;
+  opacity: 1;
+}
+.left-content .text-content .socials a i {
+  transition: all 0.3s ease;
+}
+.left-content .text-content .socials a i:hover {
   cursor: pointer;
   color: rgb(40, 119, 255);
   transform: scale(1.2);
 }
 @media screen and (min-width: 768px) {
-  .left-content .text-content .socials {
+  .left-content .text-content .socials a {
     font-size: 45px;
     margin-top: 5%;
   }
@@ -163,7 +184,6 @@ header h1 {
 .right-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .right-content {
@@ -184,6 +204,28 @@ header h1 {
   font-size: 30px;
   width: 63%;
   margin: auto;
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+.right-content .text-content .competences-icons .hover-text {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  white-space: nowrap;
+}
+.right-content .text-content .competences-icons:hover .hover-text {
+  visibility: visible;
+  opacity: 1;
 }
 .right-content .text-content .competences-icons i {
   transition: all 0.3s case;
@@ -211,6 +253,16 @@ header h1 {
   }
 }
 
+.paragraph {
+  font-size: 0.8rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .paragraph {
+    font-size: 20px;
+  }
+}
+
 .illustration {
   flex: 1;
   display: flex;
@@ -227,6 +279,7 @@ header h1 {
   .illustration img {
     width: 74%;
     height: auto;
+    margin-top: 0;
   }
 }
 
@@ -235,16 +288,6 @@ header h1 {
   justify-content: center;
   gap: 5%;
   margin-top: 5%;
-}
-
-.paragraph {
-  font-size: 10px;
-  margin-top: 4%;
-}
-@media screen and (min-width: 768px) {
-  .paragraph {
-    font-size: 20px;
-  }
 }
 
 .btn {

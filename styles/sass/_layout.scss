@@ -22,9 +22,12 @@ header{
     display: flex;
     flex-direction: row;
     margin-bottom: 3%;
-    width: 80vw;
+    width: 85vw;
     height: 7vh;
     position: fixed;
+    @media screen and (min-width: 768px){
+        gap: 5%;
+    }
     h1{
         color:rgb(62, 104, 253);
         font-size: 2rem;

@@ -1,10 +1,10 @@
 .left-content{
     display: flex;
     flex-direction: column;
-    margin-top: 35%;
+    margin-top: 25%;
     @media screen and (min-width: 768px){
         flex-direction: row;
-        margin-top: 4%;
+        margin-top: 3%;
     }
     .text-content{
         flex: 1;
@@ -16,9 +16,12 @@
             justify-content: center;
             gap: 30px;
             font-size: 30px;
-            margin-top: 8%;
+            margin-top: 6%;
+            margin-bottom: 3%;
             position: relative;
-
+            img{
+                width: 12%;
+            }
             a {
                 position: relative;
                 text-decoration: none;
@@ -65,24 +68,31 @@
 .right-content{
     display: flex;
     flex-direction: column;
+    margin-top: 25%;
     @media screen and (min-width: 768px){
         flex-direction: row-reverse;
+        margin-top: 7%;
     }
     .text-content{
         flex: 1;
         height: 65vh;
         margin: 5% 0 5% 0;
         text-align: center;
+        @media screen and (min-width: 768px){
+            margin: 0;
+            align-content: center;
+        }
         .competences-icons{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
             font-size: 30px;
-            width: 63%;
+            width: 70%;
             margin: auto;
             padding-top: 8%;
             padding-bottom: 8%;
+            
             .hover-text {
                 position: absolute;
                 bottom: -25px;
@@ -151,7 +161,7 @@
         @media screen and (min-width: 768px){
             width: 74%;
             height: auto;
-            margin-top: 0;
+            margin: auto;
         }
     }
 }
@@ -162,3 +172,11 @@
     gap: 5%;
     margin-top: 5%;
 }
+
+.fa-github {
+    --fa:"\f09b";
+    font-size: 3rem;
+    padding: 4%;
+    color: $secondary;
+  }
+  

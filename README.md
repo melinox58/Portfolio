@@ -10,7 +10,6 @@
 - css
 - sass/scss
 - JavaScript
-- docker desktop
 - Live sass compiler
 
 ## Images

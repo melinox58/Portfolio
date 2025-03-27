@@ -1,10 +1,9 @@
 .left-content{
     display: flex;
     flex-direction: column;
-    margin-top: 25%;
     @media screen and (min-width: 768px){
         flex-direction: row;
-        margin-top: 3%;
+        margin-top: 8%;
     }
     .text-content{
         flex: 1;
@@ -17,7 +16,7 @@
             gap: 30px;
             font-size: 30px;
             margin-top: 6%;
-            margin-bottom: 3%;
+            margin-bottom: 7%;
             position: relative;
             img{
                 width: 12%;
@@ -68,10 +67,9 @@
 .right-content{
     display: flex;
     flex-direction: column;
-    margin-top: 25%;
     @media screen and (min-width: 768px){
         flex-direction: row-reverse;
-        margin-top: 7%;
+        margin-top: 8%;
     }
     .text-content{
         flex: 1;
@@ -86,13 +84,17 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 4%;
             font-size: 30px;
-            width: 70%;
+            width: 85%;
             margin: auto;
             padding-top: 8%;
-            padding-bottom: 8%;
-            
+            padding-bottom: 5%;
+            @media screen and (min-width: 768px){
+                gap: 30px;
+                font-size: 30px;
+                width: 70%;
+            }
             .hover-text {
                 position: absolute;
                 bottom: -25px;
@@ -156,12 +158,13 @@
     img{
         width: 90%;
         height: auto;
-        margin-top: 9%;
-        margin-bottom: 60%;
+        margin-top: -50%;
         @media screen and (min-width: 768px){
             width: 74%;
             height: auto;
             margin: auto;
+            margin-top: 9%;
+            margin-bottom: 60%;
         }
     }
 }
@@ -175,8 +178,16 @@
 
 .fa-github {
     --fa:"\f09b";
-    font-size: 3rem;
+    font-size: 1.5rem;
     padding: 4%;
     color: $secondary;
+    @media screen and (min-width: 768px){
+        font-size: 3rem;
+    }
   }
+
+section{
+    width: 100%;
+    height: 100vh;
+}
   

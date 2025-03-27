@@ -1,21 +1,60 @@
 @charset "UTF-8";
 /* On modernise notre balise de navigation avec une petite ombre. On mets tous les éléments du menu les uns bien à côté des autres avec flexbox (display: flex) */
+/* Styles par défaut (Mobile First) */
 @import url("https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Piedra&family=Rouge+Script&display=swap");
 nav {
   background-color: #fff;
-  padding: 0 20px;
+  padding: 10px 20px;
   border-radius: 40px;
   box-shadow: 0 10px 40px rgba(159, 162, 177, 0.8);
   display: flex;
-  overflow: hidden;
-  overflow-x: auto;
-  justify-content: center;
-  flex: 2;
-  gap: 2%;
-  right: 10%;
-  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
 }
 
+/* Les liens sont cachés sur mobile */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: -114%;
+  width: 235%;
+  background: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+/* Bouton burger */
+.burger-menu {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Desktop : afficher la navbar horizontalement */
+@media screen and (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+  }
+  .burger-menu {
+    display: none;
+  }
+}
 /* On stylise chaque élément */
 .nav-item {
   color: #83818c;
@@ -23,19 +62,6 @@ nav {
   padding: 20px;
   margin: 0 6px;
   position: relative;
-}
-
-/* Ici on met juste un petit élément avant chaque élément pour le rendre plus beau visuellement */
-.nav-item:before {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  background-color: #dfe2ea;
-  height: 5px;
-  width: 100%;
-  border-radius: 8px 8px 0 0;
-  left: 0;
-  transition: 0.3s;
 }
 
 /* Avec les dernières nouveautés de CSS, on peut changer les propriétés des éléments selon des conditions avec not */
@@ -101,6 +127,7 @@ header {
   width: 85vw;
   height: 7vh;
   position: fixed;
+  z-index: 20;
 }
 @media screen and (min-width: 768px) {
   header {
@@ -109,8 +136,8 @@ header {
 }
 
 h1 {
-  color: rgb(62, 104, 253);
-  font-size: 1.5rem;
+  color: rgb(40, 119, 255);
+  font-size: 2.2rem;
   flex: 1;
   text-align: center;
 }
@@ -131,12 +158,11 @@ h1 {
 .left-content {
   display: flex;
   flex-direction: column;
-  margin-top: 25%;
 }
 @media screen and (min-width: 768px) {
   .left-content {
     flex-direction: row;
-    margin-top: 3%;
+    margin-top: 8%;
   }
 }
 .left-content .text-content {
@@ -150,7 +176,7 @@ h1 {
   gap: 30px;
   font-size: 30px;
   margin-top: 6%;
-  margin-bottom: 3%;
+  margin-bottom: 7%;
   position: relative;
 }
 .left-content .text-content .socials img {
@@ -198,12 +224,11 @@ h1 {
 .right-content {
   display: flex;
   flex-direction: column;
-  margin-top: 25%;
 }
 @media screen and (min-width: 768px) {
   .right-content {
     flex-direction: row-reverse;
-    margin-top: 7%;
+    margin-top: 8%;
   }
 }
 .right-content .text-content {
@@ -222,12 +247,19 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 4%;
   font-size: 30px;
-  width: 70%;
+  width: 85%;
   margin: auto;
   padding-top: 8%;
-  padding-bottom: 8%;
+  padding-bottom: 5%;
+}
+@media screen and (min-width: 768px) {
+  .right-content .text-content .competences-icons {
+    gap: 30px;
+    font-size: 30px;
+    width: 70%;
+  }
 }
 .right-content .text-content .competences-icons .hover-text {
   position: absolute;
@@ -294,14 +326,15 @@ h1 {
 .illustration img {
   width: 90%;
   height: auto;
-  margin-top: 9%;
-  margin-bottom: 60%;
+  margin-top: -50%;
 }
 @media screen and (min-width: 768px) {
   .illustration img {
     width: 74%;
     height: auto;
     margin: auto;
+    margin-top: 9%;
+    margin-bottom: 60%;
   }
 }
 
@@ -314,9 +347,19 @@ h1 {
 
 .fa-github {
   --fa:"";
-  font-size: 3rem;
+  font-size: 1.5rem;
   padding: 4%;
   color: rgb(0, 255, 221);
+}
+@media screen and (min-width: 768px) {
+  .fa-github {
+    font-size: 3rem;
+  }
+}
+
+section {
+  width: 100%;
+  height: 100vh;
 }
 
 .btn {

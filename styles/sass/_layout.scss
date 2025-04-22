@@ -50,4 +50,11 @@ h1{
     height: 10vh;
 }
 
-  
+footer{
+    color: $white;
+    font-size: 0.8rem;
+    @media screen and (min-width: 768px){
+        font-size: 1rem;
+         margin-top: 20%;
+    }
+}
